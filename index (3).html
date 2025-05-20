@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeRealmX</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+    header {
+      padding: 2rem;
+      text-align: left;
+      background-color: #0f0f0f;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1rem;
+      color: #aaa;
+    }
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .carousel-slide {
+      display: flex;
+      width: 300%;
+      animation: slide 9s infinite;
+    }
+    .carousel-slide img {
+      width: 100%;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(0); }
+      36% { transform: translateX(-100%); }
+      66% { transform: translateX(-100%); }
+      69% { transform: translateX(-200%); }
+      100% { transform: translateX(-200%); }
+    }
+    .watch-button {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem 2rem;
+    }
+    .thumbnail-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1rem 2rem;
+    }
+    .thumbnail-row img {
+      width: 220px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .full-width-banner {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .footer-left, .footer-right {
+      flex: 1 1 300px;
+      padding: 1rem;
+    }
+    .footer-left img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .footer-right h3 {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AnimeRealmX</h1>
+    <p>Experience. Commitment. Value.</p>
+  </header>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="rec1.jpg" alt="Recommended 1">
+      <img src="rec2.jpg" alt="Recommended 2">
+      <img src="rec3.jpg" alt="Recommended 3">
+    </div>
+    <button class="watch-button">Watch Now</button>
+  </div>
+
+  <div class="section-title">New - Released - Anime</div>
+  <div class="thumbnail-row">
+    <img src="new1.jpg" alt="New Anime 1">
+    <img src="new2.jpg" alt="New Anime 2">
+    <img src="new3.jpg" alt="New Anime 3">
+  </div>
+
+  <img class="full-width-banner" src="gojo-banner.jpg" alt="Gojo Banner">
+
+  <div class="section-title">Top - Trending - Anime</div>
+  <div class="thumbnail-row">
+    <img src="top1.jpg" alt="Top Anime 1">
+    <img src="top2.jpg" alt="Top Anime 2">
+    <img src="top3.jpg" alt="Top Anime 3">
+  </div>
+
+  <div class="section-title">Hindi - Dubbed - Anime</div>
+  <div class="thumbnail-row">
+    <img src="hindi1.jpg" alt="Hindi Anime 1">
+    <img src="hindi2.jpg" alt="Hindi Anime 2">
+    <img src="hindi3.jpg" alt="Hindi Anime 3">
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <img src="footer-image.jpg" alt="Footer Image">
+    </div>
+    <div class="footer-right">
+      <h3>Let's work together.</h3>
+      <p><strong>Mailing Address:</strong><br> India, Agra – 282007</p>
+      <p><strong>Email Address:</strong><br> hello@animerealmx.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
