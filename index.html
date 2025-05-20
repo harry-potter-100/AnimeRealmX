@@ -1,43 +1,172 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>AnimeRealmX</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeRealmX</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background: url('https://wallpaperaccess.com/full/5732463.jpg') center/cover no-repeat;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .main-search {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a1a1a;
+    }
+    .main-search input {
+      padding: 0.5rem 1rem;
+      width: 60%;
+      max-width: 400px;
+      border-radius: 25px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      justify-items: center;
+    }
+    .card {
+      background-color: #fff;
+      color: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      width: 100%;
+      max-width: 250px;
+    }
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .card p {
+      margin: 0.5rem 0;
+    }
+    .recommendation-carousel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #1a1a1a;
+      flex-wrap: wrap;
+    }
+    .carousel {
+      width: 60%;
+      max-width: 600px;
+    }
+    .carousel img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      animation: fadein 8s infinite alternate;
+    }
+    .carousel-description {
+      width: 35%;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    @keyframes fadein {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    footer {
+      background-color: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AnimeRealmX</h1>
-        <p>Watch Anime Legally - Embedded Sources</p>
-    </header>
-    <main>
-        <div class="anime-grid">
-            <div class="anime-card">
-                <h2>Jujutsu Kaisen</h2>
-                <iframe src="https://www.youtube.com/embed/UnV3vN8nE4s" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="anime-card">
-                <h2>One Piece</h2>
-                <iframe src="https://www.youtube.com/embed/MC0pHcv3ksc" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="anime-card">
-                <h2>All Devouring Whale</h2>
-                <iframe src="https://www.youtube.com/embed/x2VfJmvG1Wk" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="anime-card">
-                <h2>Wind Breaker</h2>
-                <iframe src="https://www.youtube.com/embed/8wGb-h_vvsk" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="anime-card">
-                <h2>Super Cube</h2>
-                <iframe src="https://www.youtube.com/embed/kGMpAVxwH9c" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>© 2025 AnimeRealmX. All content embedded from public platforms like YouTube.</p>
-    </footer>
+  <header>
+    <h1>AnimeRealmX</h1>
+    <p>Experience. Commitment. Value.</p>
+  </header>
+
+  <div class="main-search">
+    <input type="text" placeholder="Search Anime...">
+  </div>
+
+  <div class="recommendation-carousel">
+    <div class="carousel">
+      <img src="https://wallpapercave.com/wp/wp10467630.jpg" alt="Anime 1">
+    </div>
+    <div class="carousel-description">
+      <h2>Recommended</h2>
+      <p>Discover top picks from our collection. These anime are trending now and highly recommended by fans across the globe.</p>
+      <button class="watch-btn">Watch Now</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">New Released Anime - Watch now</div>
+    <div class="card-grid-3">
+      <div class="card"><img src="https://wallpaperaccess.com/full/5732458.jpg" alt="Anime 1"><p>Anime 1</p><small>Sub | Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/5229947.jpg" alt="Anime 2"><p>Anime 2</p><small>Sub | Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/6359174.jpg" alt="Anime 3"><p>Anime 3</p><small>Sub | Dub</small></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Most Popular Anime</div>
+    <div class="card-grid-3">
+      <div class="card"><img src="https://wallpaperaccess.com/full/1853894.jpg" alt="Anime 4"><p>Anime 4</p><small>Sub | Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/1911410.jpg" alt="Anime 5"><p>Anime 5</p><small>Sub | Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/4738887.jpg" alt="Anime 6"><p>Anime 6</p><small>Sub | Dub</small></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Start Your Anime Journey For Free</div>
+    <div class="card-grid-3">
+      <div class="card"><img src="https://wallpaperaccess.com/full/5229936.jpg" alt="Anime 7"><p>Anime 7</p><small>Sub | Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/4450607.jpg" alt="Anime 8"><p>Anime 8</p><small>Sub | Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/3193294.jpg" alt="Anime 9"><p>Anime 9</p><small>Sub | Dub</small></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Hindi Dubbed Anime</div>
+    <div class="card-grid-3">
+      <div class="card"><img src="https://wallpaperaccess.com/full/2387297.jpg" alt="Anime 10"><p>Anime 10</p><small>Hindi Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/2387289.jpg" alt="Anime 11"><p>Anime 11</p><small>Hindi Dub</small></div>
+      <div class="card"><img src="https://wallpaperaccess.com/full/2387325.jpg" alt="Anime 12"><p>Anime 12</p><small>Hindi Dub</small></div>
+    </div>
+  </div>
+
+  <footer>
+    About | Privacy Policy | Terms of Use | Contact | Report Content<br>
+    &copy; AnimeRealmX 2025
+  </footer>
 </body>
 </html>
