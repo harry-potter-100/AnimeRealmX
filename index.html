@@ -436,19 +436,126 @@
     </style>
 </head>
 <body>
-    <!-- Hero Banner with Search -->
-    <section class="hero">
+  <!-- Hero Section -->
+<section class="hero-simple">
+    <div class="hero-content">
         <h1 class="logo">AnimeRealmX</h1>
-        <p class="tagline">Your premium gateway to the anime universe</p>
+        <p class="tagline">Expertise. Commitment. Value.</p>
         
-        <div class="search-container">
-            <div class="search-bar">
-                <input type="text" placeholder="Search for anime, movies, or series...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
+        <div class="search-bar-simple">
+            <input type="text" placeholder="Search for anime...">
+            <button><i class="fas fa-search"></i></button>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Recommended Section -->
+<section class="recommended-section">
+    <h2 class="section-title">Recommended</h2>
     
+    <div class="recommended-card">
+        <div class="anime-poster" style="background: url('https://via.placeholder.com/400x600/ffff00/000000?text=Anime+Poster') center/cover;"></div>
+        
+        <div class="anime-details">
+            <p class="anime-description">
+                Established in 1992, Stratford Accounting is a full service firm, 
+                offering affordable accounting solutions to individuals and local 
+                and international businesses.
+            </p>
+            <a href="#" class="watch-now-btn">Watch now <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Simple Hero Styles */
+    .hero-simple {
+        background-color: var(--secondary);
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+        color: var(--gray);
+        margin-bottom: 2rem;
+    }
+    
+    .search-bar-simple {
+        display: flex;
+        max-width: 600px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    
+    .search-bar-simple input {
+        flex: 1;
+        padding: 12px 20px;
+        border: none;
+        background: transparent;
+        color: var(--light);
+    }
+    
+    .search-bar-simple button {
+        padding: 0 20px;
+        background: var(--primary);
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    
+    /* Recommended Section Styles */
+    .recommended-section {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .recommended-card {
+        display: flex;
+        background: var(--card-bg);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .anime-poster {
+        flex: 0 0 40%;
+        min-height: 300px;
+    }
+    
+    .anime-details {
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .anime-description {
+        color: var(--gray);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .watch-now-btn {
+        align-self: flex-start;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+</style>  
     <!-- Featured Manhwa Section -->
     <section class="featured">
         <div class="featured-poster"></div>
