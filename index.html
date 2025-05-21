@@ -1,104 +1,207 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accounting Services | Professional Financial Solutions</title>
+    <title>AnimeRealmX - Your Ultimate Anime Destination</title>
     <style>
-        /* Black and White Photographic Style */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+        /* Main Styles */
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #fff;
-            line-height: 1.6;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
         
+        body {
+            background-color: #0f0f1a;
+            color: #ffffff;
+        }
+        
+        /* Header */
         header {
-            background-color: #000;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+            background-color: #1a1a2e;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
-        nav {
-            background-color: #222;
-            padding: 1rem;
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e94560;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
         }
         
         nav a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: 500;
+            transition: color 0.3s;
         }
         
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            color: white;
-            padding: 5rem 2rem;
-            text-align: center;
+        nav a:hover {
+            color: #e94560;
         }
         
-        .services {
+        /* Hero Sections */
+        .section {
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #e94560;
+            border-left: 4px solid #e94560;
+            padding-left: 1rem;
+        }
+        
+        .anime-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
         }
         
-        .service-card {
-            border: 1px solid #ddd;
-            padding: 2rem;
-            text-align: center;
+        .anime-card {
+            background-color: #1a1a2e;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
         }
         
+        .anime-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .anime-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        
+        .anime-info {
+            padding: 1rem;
+        }
+        
+        .anime-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
         footer {
-            background-color: #000;
-            color: white;
-            text-align: center;
+            background-color: #1a1a2e;
             padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e94560;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #e94560;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: #a1a1a1;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Accounting Services</h1>
-        <p>Professional Financial Solutions</p>
+        <div class="logo">AnimeRealmX</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New Releases</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Hindi Dubbed</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    
-    <section class="hero">
-        <h2>Precision Accounting for Your Business</h2>
-        <p>Expert financial services tailored to your needs</p>
-        <button>Get Started</button>
-    </section>
-    
-    <section id="services" class="services">
-        <div class="service-card">
-            <h3>Tax Preparation</h3>
-            <p>Professional tax filing services to maximize your returns</p>
-        </div>
-        <div class="service-card">
-            <h3>Bookkeeping</h3>
-            <p>Accurate record keeping for your business finances</p>
-        </div>
-        <div class="service-card">
-            <h3>Financial Planning</h3>
-            <p>Strategic planning for your financial future</p>
+
+    <!-- New Released Anime Section -->
+    <section class="section">
+        <h2 class="section-title">New Released Anime</h2>
+        <div class="anime-grid">
+            <!-- Anime Card 1 -->
+            <div class="anime-card">
+                <img src="https://via.placeholder.com/300x450/1a1a2e/e94560?text=Anime+1" alt="Anime Cover">
+                <div class="anime-info">
+                    <h3>Anime Title 1</h3>
+                    <p>Episode 12</p>
+                </div>
+            </div>
+            <!-- Repeat for other anime cards -->
+            <div class="anime-card">
+                <img src="https://via.placeholder.com/300x450/1a1a2e/e94560?text=Anime+2" alt="Anime Cover">
+                <div class="anime-info">
+                    <h3>Anime Title 2</h3>
+                    <p>Episode 8</p>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
         </div>
     </section>
-    
+
+    <!-- Top Trending Anime Section -->
+    <section class="section">
+        <h2 class="section-title">Top Trending Anime</h2>
+        <div class="anime-grid">
+            <!-- Anime cards same structure as above -->
+        </div>
+    </section>
+
+    <!-- Hindi Dubbed Anime Section -->
+    <section class="section">
+        <h2 class="section-title">Hindi Dubbed Anime</h2>
+        <div class="anime-grid">
+            <!-- Anime cards same structure as above -->
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2023 Accounting Services. All rights reserved.</p>
+        <h3 class="footer-title">Let's work together</h3>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+        </div>
+        <p class="copyright">© 2023 AnimeRealmX. All rights reserved.</p>
     </footer>
 </body>
 </html>
