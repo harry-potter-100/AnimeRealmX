@@ -1,159 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnimeRealmX</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: white;
-    }
-    header {
-      padding: 2rem;
-      text-align: left;
-      background-color: #0f0f0f;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1rem;
-      color: #aaa;
-    }
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-    .carousel-slide {
-      display: flex;
-      width: 300%;
-      animation: slide 9s infinite;
-    }
-    .carousel-slide img {
-      width: 100%;
-      object-fit: cover;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      33% { transform: translateX(0); }
-      36% { transform: translateX(-100%); }
-      66% { transform: translateX(-100%); }
-      69% { transform: translateX(-200%); }
-      100% { transform: translateX(-200%); }
-    }
-    .watch-button {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      color: black;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .section-title {
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem 2rem;
-    }
-    .thumbnail-row {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      padding: 1rem 2rem;
-    }
-    .thumbnail-row img {
-      width: 220px;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-    .full-width-banner {
-      width: 100%;
-      height: auto;
-      margin-top: 1rem;
-    }
-    footer {
-      background-color: #111;
-      color: white;
-      padding: 2rem;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .footer-left, .footer-right {
-      flex: 1 1 300px;
-      padding: 1rem;
-    }
-    .footer-left img {
-      width: 100%;
-      border-radius: 6px;
-    }
-    .footer-right h3 {
-      margin-bottom: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting Services | Professional Financial Solutions</title>
+    <style>
+        /* Black and White Photographic Style */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #000;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #222;
+            padding: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+        }
+        
+        .service-card {
+            border: 1px solid #ddd;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <h1>AnimeRealmX</h1>
-    <p>Experience. Commitment. Value.</p>
-  </header>
-
-  <div class="carousel-container">
-    <div class="carousel-slide">
-      <img src="rec1.jpg" alt="Recommended 1">
-      <img src="rec2.jpg" alt="Recommended 2">
-      <img src="rec3.jpg" alt="Recommended 3">
-    </div>
-    <button class="watch-button">Watch Now</button>
-  </div>
-
-  <div class="section-title">New - Released - Anime</div>
-  <div class="thumbnail-row">
-    <img src="new1.jpg" alt="New Anime 1">
-    <img src="new2.jpg" alt="New Anime 2">
-    <img src="new3.jpg" alt="New Anime 3">
-  </div>
-
-  <img class="full-width-banner" src="gojo-banner.jpg" alt="Gojo Banner">
-
-  <div class="section-title">Top - Trending - Anime</div>
-  <div class="thumbnail-row">
-    <img src="top1.jpg" alt="Top Anime 1">
-    <img src="top2.jpg" alt="Top Anime 2">
-    <img src="top3.jpg" alt="Top Anime 3">
-  </div>
-
-  <div class="section-title">Hindi - Dubbed - Anime</div>
-  <div class="thumbnail-row">
-    <img src="hindi1.jpg" alt="Hindi Anime 1">
-    <img src="hindi2.jpg" alt="Hindi Anime 2">
-    <img src="hindi3.jpg" alt="Hindi Anime 3">
-  </div>
-
-  <footer>
-    <div class="footer-left">
-      <img src="footer-image.jpg" alt="Footer Image">
-    </div>
-    <div class="footer-right">
-      <h3>Let's work together.</h3>
-      <p><strong>Mailing Address:</strong><br> India, Agra – 282007</p>
-      <p><strong>Email Address:</strong><br> hello@animerealmx.com</p>
-    </div>
-  </footer>
-
+    <header>
+        <h1>Accounting Services</h1>
+        <p>Professional Financial Solutions</p>
+    </header>
+    
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section class="hero">
+        <h2>Precision Accounting for Your Business</h2>
+        <p>Expert financial services tailored to your needs</p>
+        <button>Get Started</button>
+    </section>
+    
+    <section id="services" class="services">
+        <div class="service-card">
+            <h3>Tax Preparation</h3>
+            <p>Professional tax filing services to maximize your returns</p>
+        </div>
+        <div class="service-card">
+            <h3>Bookkeeping</h3>
+            <p>Accurate record keeping for your business finances</p>
+        </div>
+        <div class="service-card">
+            <h3>Financial Planning</h3>
+            <p>Strategic planning for your financial future</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2023 Accounting Services. All rights reserved.</p>
+    </footer>
 </body>
 </html>
