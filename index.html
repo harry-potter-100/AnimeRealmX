@@ -437,18 +437,120 @@
 </head>
 <body>
   <!-- Hero Section -->
-<section class="hero-simple">
-    <div class="hero-content">
+<section class="hero-section">
+    <!-- Black landscape card with logo -->
+    <div class="site-logo-card">
         <h1 class="logo">AnimeRealmX</h1>
-        <p class="tagline">Expertise. Commitment. Value.</p>
-        
-        <div class="search-bar-simple">
-            <input type="text" placeholder="Search for anime...">
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search anime...">
             <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+
+    <!-- Auto-changing anime showcase -->
+    <div class="featured-anime-container">
+        <div class="featured-poster"></div>
+        <div class="featured-info">
+            <h2 class="anime-title">Featured Anime</h2>
+            <p class="anime-description">Description will auto-rotate every 2.5 seconds</p>
         </div>
     </div>
 </section>
 
+<style>
+    /* ADD THESE STYLES TO YOUR EXISTING CSS */
+    .hero-section {
+        background-color: #0a0a12;
+        padding: 40px 5%;
+    }
+    
+    .site-logo-card {
+        height: 200px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .logo {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    
+    .search-container {
+        width: 80%;
+        margin: 0 auto 40px;
+    }
+    
+    .search-bar {
+        display: flex;
+    }
+    
+    .search-bar input {
+        flex: 1;
+        padding: 12px;
+        border: none;
+    }
+    
+    .search-bar button {
+        padding: 0 20px;
+        background: #ff2d54;
+        color: white;
+        border: none;
+    }
+    
+    .featured-anime-container {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .featured-poster {
+        width: 60%;
+        height: 400px;
+        background-color: white;
+    }
+    
+    .featured-info {
+        width: 35%;
+        padding: 20px;
+    }
+</style>
+
+<script>
+    // ADD THIS SCRIPT FOR AUTO-ROTATING CONTENT
+    document.addEventListener('DOMContentLoaded', function() {
+        const posters = [
+            { title: "Demon Slayer", desc: "Tanjiro Kamado fights demons..." },
+            { title: "Jujutsu Kaisen", desc: "Yuji Itadori becomes host..." },
+            { title: "Attack on Titan", desc: "Eren Yeager battles titans..." }
+        ];
+        
+        let currentIndex = 0;
+        
+        function rotateContent() {
+            const poster = document.querySelector('.featured-poster');
+            const title = document.querySelector('.anime-title');
+            const desc = document.querySelector('.anime-description');
+            
+            // Change background image (you'll replace with actual images later)
+            poster.style.backgroundImage = `url(https://via.placeholder.com/800x400/333/fff?text=${posters[currentIndex].title})`;
+            title.textContent = posters[currentIndex].title;
+            desc.textContent = posters[currentIndex].desc;
+            
+            currentIndex = (currentIndex + 1) % posters.length;
+        }
+        
+        // Rotate every 2.5 seconds
+        setInterval(rotateContent, 2500);
+        rotateContent(); // Initialize immediately
+    });
+</script>
 <!-- Recommended Section -->
 <section class="recommended-section">
     <h2 class="section-title">Recommended</h2>
