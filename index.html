@@ -438,17 +438,17 @@
 <body>
   <!-- Hero Section -->
 <section class="hero-section">
-    <!-- Black landscape card with logo -->
-    <div class="site-logo-card">
-        <h1 class="logo">AnimeRealmX</h1>
-    </div>
-
-    <!-- Search bar -->
+    <!-- Search bar at TOP -->
     <div class="search-container">
         <div class="search-bar">
             <input type="text" placeholder="Search anime...">
             <button><i class="fas fa-search"></i></button>
         </div>
+    </div>
+
+    <!-- Black landscape card with logo -->
+    <div class="site-logo-card">
+        <h1 class="logo">AnimeRealmX</h1>
     </div>
 
     <!-- Auto-changing anime showcase -->
@@ -462,30 +462,32 @@
 </section>
 
 <style>
-    /* ADD THESE STYLES TO YOUR EXISTING CSS */
+    /* MODIFIED STYLES */
     .hero-section {
         background-color: #0a0a12;
-        padding: 40px 5%;
+        padding: 20px 5% 40px; /* More padding at bottom */
     }
     
+    /* Search bar now at top */
+    .search-container {
+        width: 80%;
+        margin: 0 auto 30px; /* Added margin below */
+    }
+    
+    /* Rest remains the same */
     .site-logo-card {
         height: 200px;
         background-color: #000;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
     
     .logo {
         color: #fff;
         font-size: 3rem;
         font-weight: bold;
-    }
-    
-    .search-container {
-        width: 80%;
-        margin: 0 auto 40px;
     }
     
     .search-bar {
@@ -521,6 +523,9 @@
         padding: 20px;
     }
 </style>
+
+<!-- Keep the same JavaScript as before -->
+    
 
 <script>
     // ADD THIS SCRIPT FOR AUTO-ROTATING CONTENT
